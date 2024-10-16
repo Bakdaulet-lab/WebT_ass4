@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./index.js"></script>
+    <h2>What Can JavaScript Do?</h2>
+    <p id="demo">JavaScript can change html content.</p>
+    <button type="button" onclick="document.getElementById('demo').innerHTML='Hello JavaScript!'">click me</button>
+
+    <p id="demo2">JavaScript can change CSS</p>
+    <button type="button" onclick="document.getElementById('demo2').style.fontSize='35px'">make bold</button>
+
+    <p id="demo3" style="display: none;">Hello JavaScript2!</p>
+    <button onclick="document.getElementById('demo3').style.display='block'">show</button>
+    <button onclick="document.getElementById('demo3').style.display='none'">hide</button>
+
+<p>JavaScript can change HTML attribute values.</p>
+
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<button onclick="document.getElementById('myImage').src='astana.jpg'">Turn on the light</button>
+
+<img id="myImage" src="tokio.webp"  style="width:1000px">
+
+<button onclick="document.getElementById('myImage').src='tokio.webp'">Turn off the light</button> <br>
+
+
+<div id="c"><button onclick="calc()">Calculate</button></div>
+
+<div id="date"><button onclick="showDate()">get date</button></div>
+
+<div id="leapYear"><button onclick="getLeapYear()">Check leap year</button></div>  
+
+
+
+
+
+
+
+<div style="border: 1px solid black; margin-right: 85%; padding-left: 15px;">
+
+<label  for="input">1st Number:</label>
+<input id="1st" type="text"> <br>
+
+<label  for="input">2st Number:</label>
+<input id="2st" type="text"> <br>
+
+<button onclick="Mult()" >Multiply</button>
+<button onclick="Div()" >Divide</button> <br>
+
+
+<p id="answer"></p>
+
+</div>
+
+
+
+
+
+
+
+<label>Enter a temperature:</label> <br>
+<input id="temp" type="text"> <br>
+<label >convert to:</label> <br>
+
+<input id="cel" type="radio" name="unit">
+<label  >Celsius</label> <br>
+
+<input id="far" type="radio" name="unit"> 
+<label >Farengeit</label> <br>
+
+<button onclick="temperature()">Submit</button> <br>
+<label id="tempLabel"></label>
+
+
+
+
+
+
+<h2>Even or Odd Checker</h2>
+    <div id="result"><input type="text" id="numberInput" placeholder="Enter a number">
+    <button onclick="checkEvenOdd()">Check</button></div>
+
+    <h2>Find the Largest and Smallest Number</h2>
+    <input type="text" id="num1" placeholder="Enter the first number">
+    <input type="text" id="num2" placeholder="Enter the second number">
+    <input type="text" id="num3" placeholder="Enter the third number">
+    <button onclick="findLargestAndSmallest()">Find</button>
+
+    <div id="result2"></div>
+в <br>
+
+
+
+
+
+
+<label for="input">Enter the length of a</label>
+<input id="Alength" type="text"> <br>
+<label for="input">Enter the length of b</label>
+<input id="Blength" type="text"> <br>
+<label for="input">Enter the length of c</label>
+<input id="Clength" type="text"> <br>
+
+<button onclick="heron()">Calculate</button>
+
+<label id="result3"></label> <br>
+
+
+
+
+
+<label for="input">Enter text to count number of vowels and consonants</label> <br>
+<input id="counter" type="text"> <br>
+<button onclick="CounterVowelConsonants()">Count</button> <br>
+
+<label id="cntV"></label> <br>
+<label id="cntC"></label> <br>
+ 
+
+
+
+
+<label for="input">Enter seconds to transform into hours and minutes</label> <br>
+<input id="hoursec" type="text"> <br>
+<button onclick="Transform_into_HandM()">transform</button> <br>
+
+<label id="hours"></label> <br>
+<label id="min"></label> <br>
+
+
+
+</body>
+</html>
