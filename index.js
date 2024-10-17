@@ -188,3 +188,67 @@ function Transform_into_HandM(){
     document.getElementById('min').innerHTML = `Seconds transformed into minuts = ${Minuts}`;
     
 }
+
+
+function MostFrequentNum(){
+
+    let inputArray = document.getElementById('arrNumber').value.split(',').map(Number);
+
+    let MostFrequentMap = {};
+    let MostFreqNum = null;
+    let MaxFreq=0;
+
+    for(let num of inputArray){
+        if(MostFrequentMap[num]){
+            MostFrequentMap[num]++;
+        }
+        else{
+            MostFrequentMap[num] = 1;
+        }
+
+        if(MostFrequentMap[num]>MaxFreq){
+         MaxFreq = MostFrequentMap[num];
+         MostFreqNum = num;
+        }
+
+    }
+
+    document.getElementById('MostFreqNum').innerHTML = `Most frequent number in given array is ${MostFreqNum}`;
+}
+
+
+function Fibonacci(){
+
+    function fibo(n){
+        
+        if (n <= 1) {
+            return n;
+          } else {
+            return fibo(n - 1) + fibo(n - 2);
+          }
+
+    }
+
+    let res = fibo(parseInt(document.getElementById('fibo').value));
+    document.getElementById('fibo2').innerHTML = `Your fibonacci number is ${res}`;
+
+}
+
+function calculateDaysToNewYear() {
+    
+    let today = new Date();
+
+    
+    let currentYear = today.getFullYear();
+    let nextYear = currentYear + 1;
+    let newYearDate = new Date(nextYear, 0, 1);  
+
+   
+    let timeDifference = newYearDate - today;
+
+    
+    let daysLeft = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+    
+    document.getElementById('res2').innerHTML = `There are ${daysLeft} days left until New Year!`;
+}
